@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Weather Forecast";
+}
+
+<h1>Search City and Get Weather Forecast</h1>
+
+<div>
+    <strong>City Name:</strong><input id="txtCity" type="text" />
+    <button id="btnSubmit">Get Weather Forecast</button>
+</div>
+
+<hr />
+
+<div id="forecastArea" style="display: none;">
+    <h2>Weather Forecast</h2>
+    <table>
+        <tr>
+            <td>Weather Symbol Icon <img id="imgWeatherIconUrl" src="" title="Weather Icon" /></td>
+        </tr>
+        <tr>
+            <td><strong>City:</strong> <span id="lblCity"></span>, <span id="lblCountry"></span></td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Latitude:</strong> <label id="lblLat"></label><br />
+                <strong>Longitude:</strong> <label id="lblLon"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Description:</strong> <label id="lblDescription"></label><br />
+                <strong>Humidity:</strong> <label id="lblHumidity"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Feels Like:</strong> <label id="lblTempFeelsLike"></label><br />
+                <strong>Temp:</strong> <label id="lblTemp"></label><br />
+                <strong>Min:</strong> <label id="lblTempMin"></label><br />
+                <strong>Max:</strong> <label id="lblTempMax"></label><br />
+            </td>
+        </tr>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/weather.js"></script>
+}
