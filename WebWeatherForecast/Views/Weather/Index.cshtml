@@ -13,63 +13,75 @@
 <hr />
 
 <div id="forecastArea" style="display: none;">
-    <div class="container justify-content-left p-0">
-        <div class="weather-content infoBlock d-flex w-100">
-            <div class="left-content flex-grow-1 me-3">
-                <div><h1><span id="lblCity"></span>, <span id="lblCountry"></span></h1></div>
-                <div><label class="underText" id="lblDescription"></label></div>
+    <div class="container p-0">
+        <div class="d-flex">
+            <div class="flex-grow-1">
+                <div class="weather-content infoBlock d-flex w-100">
+                    <div class="left-content flex-grow-1 me-3">
+                        <div><h1><span id="lblCity"></span>, <span id="lblCountry"></span></h1></div>
+                        <div><label class="underText" id="lblDescription"></label></div>
 
-                <div><h3 class="mt-5"><label id="lblTemp"></label></h3></div>
+                        <div><h3 class="mt-5"><label id="lblTemp"></label></h3></div>
 
-                <div><label class="underText">Feels Like:</label> <label class="underText" id="lblTempFeelsLike"></label></div>
-            </div>
-            <div class="right-content">
-                <img id="imgWeatherIconUrl" src="" title="Weather Icon" />
-            </div>
-        </div>
+                        <div><label class="underText">Feels Like:</label> <label class="underText" id="lblTempFeelsLike"></label></div>
+                    </div>
+                    <div class="right-content">
+                        <img id="imgWeatherIconUrl" src="" title="Weather Icon" />
+                    </div>
+                </div>
 
-        <div class="weather-condition infoBlock text-dark p-3 rounded mt-3">
-            <label class="infoHeader mb-4">Air Conditions</label>
-            <div class="row text-center">
-                <div class="col d-flex align-items-start justify-content-center">
-                    <div class="weather-info-icon">💨</div>
-                    <div class="weather-info-text ms-2">
-                        <div class="label">Wind (info)</div>
-                        <div class="value text-dark">
-                            <strong><span id="lblWindSpeed"></span>, <span id="lblWindDegree"></span></strong>
+                <div class="weather-condition infoBlock text-dark p-3 rounded mt-3">
+                    <label class="infoHeader mb-4">Air Conditions</label>
+                    <div class="row text-center">
+                        <div class="col d-flex align-items-start justify-content-center">
+                            <div class="weather-info-icon">💨</div>
+                            <div class="weather-info-text ms-2">
+                                <div class="label">Wind (info)</div>
+                                <div class="value text-dark">
+                                    <strong><span id="lblWindSpeed"></span>, <span id="lblWindDegree"></span></strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col d-flex align-items-start justify-content-center">
+                            <div class="weather-info-icon">🌫️</div>
+                            <div class="weather-info-text ms-2">
+                                <div class="label">Pressure</div>
+                                <div class="value text-dark"><strong><span id="lblPressure"></span></strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col d-flex align-items-start justify-content-center mt-5">
+                            <div class="weather-info-icon">☁️</div>
+                            <div class="weather-info-text ms-2">
+                                <div class="label">Cloudiness</div>
+                                <div class="value text-dark"><strong><span id="lblCloudiness"></span></strong></div>
+                            </div>
+                        </div>
+
+                        <div class="col d-flex align-items-start justify-content-center mt-5">
+                            <div class="weather-info-icon">💧</div>
+                            <div class="weather-info-text ms-2">
+                                <div class="label">Humidity</div>
+                                <div class="value text-dark"><strong><span id="lblHumidity"></span> %</strong></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col d-flex align-items-start justify-content-center">
-                    <div class="weather-info-icon">🌫️</div>
-                    <div class="weather-info-text ms-2">
-                        <div class="label">Pressure</div>
-                        <div class="value text-dark"><strong><span id="lblPressure"></span></strong></div>
-                    </div>
-                </div>
             </div>
 
-            <div class="row text-center mt-4">
-                <div class="col d-flex align-items-start justify-content-center">
-                    <div class="weather-info-icon">☁️</div>
-                    <div class="weather-info-text ms-2">
-                        <div class="label">Cloudiness</div>
-                        <div class="value text-dark"><strong><span id="lblCloudiness"></span></strong></div>
-                    </div>
-                </div>
-
-                <div class="col d-flex align-items-start justify-content-center">
-                    <div class="weather-info-icon">💧</div>
-                    <div class="weather-info-text ms-2">
-                        <div class="label">Humidity</div>
-                        <div class="value text-dark"><strong><span id="lblHumidity"></span> %</strong></div>
-                    </div>
-                </div>
+            <div class="infoBlock ml-3" id="forecastTodayArea" style="display:none; width:40%;">
+                <label class="infoHeader mb-4">Today's Forecast</label>
+                <div id="forecastTodayBody"></div>
             </div>
-
         </div>
+    </div>
 
+    <div class="infoBlock" id="forecastDailyArea" style="display: none; margin-top: 2rem; margin-bottom: 2rem;">
+        <label class="infoHeader mb-4">5-Day Forecast</label>
+        <div id="forecastDailyBody"></div>
     </div>
 </div>
 

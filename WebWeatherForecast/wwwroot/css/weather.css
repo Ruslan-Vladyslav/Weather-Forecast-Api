@@ -1,9 +1,9 @@
 ﻿.weather-content {
-    max-width: 55%;
+    max-width: 97%;
 }
 
 .weather-condition {
-    max-width: 55%;
+    max-width: 97%;
     margin-top: 20px;
     font-size: 1.1rem;
     color: #333;
@@ -108,4 +108,40 @@
     max-width: 400px;
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
+}
+
+#forecastTodayArea {
+    align-self: stretch; 
+    overflow-y: auto;
+}
+
+
+
+/*Day forecast*/
+.forecast-row {
+    display: flex;
+    align-items: center;
+    border: 3px solid #ddd;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+.forecast-time {
+    width: 70px;
+    font-weight: 600;
+}
+
+.forecast-temp {
+    width: 80px;
+}
+
+.forecast-desc {
+    flex-grow: 1;
+    text-transform: capitalize;
+}
+
+.forecast-icon img {
+    width: 40px;
+    height: 40px;
 }

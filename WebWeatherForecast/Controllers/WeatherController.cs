@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebWeatherForecast.Models;
 using WebWeatherForecast.Services;
 
 namespace WebWeatherForecast.Controllers
@@ -26,9 +27,23 @@ namespace WebWeatherForecast.Controllers
 
             var result = await _weatherService.GetWeatherAsync(city);
             if (result == null)
-                return StatusCode(500, "Error retrieving weather data");
+                return StatusCode(500, "Forecast not found for this city");
 
             return Json(result);
+        }
+
+        [HttpGet("Weather/WeatherDetailDays")]
+        public async Task<IActionResult> GetForecast([FromQuery] string city)
+        {
+            if (string.IsNullOrWhiteSpace(city))
+                return BadRequest("City name is required.");
+
+            var result = await _weatherService.GetDayForecastAsync(city);
+
+            if (result == null)
+                return NotFound("Forecast not found for this city");
+
+            return Ok(result);
         }
     }
 }

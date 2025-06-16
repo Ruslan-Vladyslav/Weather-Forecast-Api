@@ -2,12 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+<div class="text-center mt-5">
+    <h1 class="display-4 mb-4">Welcome to WebWeatherForecast!</h1>
 
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p class="lead mb-4">
+        Stay up to date with the latest weather forecast in your city.<br />
+        Click the button below to view detailed weather information for today and the upcoming 5 days.
+    </p>
 
-    <button class="dark-btn btn btn-dark btn-lg">
-        <a class="navbar-brand" asp-area="" asp-controller="Weather" asp-action="Index">View Weather Forecast</a>
+    <button class="btn btn-dark btn-lg">
+        <a class="text-white text-decoration-none" asp-area="" asp-controller="Weather" asp-action="Index">View Weather Forecast</a>
     </button>
 </div>
