@@ -1,0 +1,111 @@
+﻿.weather-content {
+    max-width: 55%;
+}
+
+.weather-condition {
+    max-width: 55%;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.weather-condition .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.weather-condition p {
+    flex: 1 1 45%;
+    margin: 0;
+}
+
+.weather-condition p span:first-child {
+    font-weight: 600;
+}
+
+.icon-label {
+    font-weight: 600;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.text-dark {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.weather-info-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.weather-info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.weather-info-text .label {
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.weather-info-text .value {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+
+.infoHeader {
+    color: #666666;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.infoBlock {
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#imgWeatherIconUrl {
+    width: 150px;
+    height: 150px;
+    image-rendering: crisp-edges;
+}
+
+.underText {
+    font-size: 1.1rem;
+    color: #666666; 
+}
+
+
+.dark-btn {
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.dark-btn:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.dark-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#txtCity {
+    max-width: 400px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+}

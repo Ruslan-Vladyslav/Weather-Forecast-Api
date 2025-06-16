@@ -42,7 +42,15 @@ namespace WebWeatherForecast.Services
                 TempMin = root.GetProperty("main").GetProperty("temp_min").GetDouble(),
                 TempMax = root.GetProperty("main").GetProperty("temp_max").GetDouble(),
                 TempFeelsLike = root.GetProperty("main").GetProperty("feels_like").GetDouble(),
-                Humidity = root.GetProperty("main").GetProperty("humidity").GetInt32()
+
+                 Details = new WeatherDetailModel
+                 {
+                     Humidity = root.GetProperty("main").GetProperty("humidity").GetInt32(),
+                     WindSpeed = root.GetProperty("wind").GetProperty("speed").GetDouble(),
+                     WindDegree = root.GetProperty("wind").GetProperty("deg").GetInt32(),
+                     Pressure = root.GetProperty("main").GetProperty("pressure").GetInt32(),
+                     Cloudiness = root.GetProperty("clouds").GetProperty("all").GetInt32()
+                 }
             };
         }
     }

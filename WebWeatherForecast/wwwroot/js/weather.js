@@ -4,7 +4,7 @@ $(document).ready(function() {
         if (!IsEmptyCity(cityname)) return;
 
         $.ajax({
-            url: "/Home/WeatherDetail?city=" + cityname,
+            url: "/Weather/WeatherDetail?city=" + cityname,
             type: "GET",
             success: function(data) {
                 $("#forecastArea").show();
@@ -13,25 +13,30 @@ $(document).ready(function() {
                 $("#lblLat").text(data.lat);
                 $("#lblLon").text(data.lon);
                 $("#lblDescription").text(data.description);
-                $("#lblHumidity").text(data.humidity);
                 $("#lblTempFeelsLike").html(data.tempFeelsLike + " &deg;C");
                 $("#lblTemp").html(data.temp + " &deg;C");
-                $("#lblTempMin").html(data.tempMin + " &deg;C");
-                $("#lblTempMax").html(data.tempMax + " &deg;C");
-                $("#imgWeatherIconUrl").attr("src", "https://openweathermap.org/img/w/" + data.weatherIcon + ".png");
+                $("#imgWeatherIconUrl").attr("src", "https://openweathermap.org/img/wn/" + data.weatherIcon + "@2x.png");
+
+                $("#lblHumidity").text(data.details.humidity);
+                $("#lblWindSpeed").text(data.details.windSpeed + " m/s");
+                $("#lblWindDegree").text(data.details.windDegree + "\u00B0");
+                $("#lblPressure").text(data.details.pressure + " hPa");
+                $("#lblCloudiness").text(data.details.cloudiness + " %");
             },
             error: function(xhr) {
-                alert("Error: " + xhr.responseText);
+                showToast(xhr.responseText || "Unexpected error occurred");
                 $("#forecastArea").hide();
             }
         });
     });
 });
 
+
 function IsEmptyCity(city) {
     if (city.length === 0) {
-        alert("Please enter a city name.");
+        showToast("Please enter a city name");
         return false;
     }
     return true;
 }
+

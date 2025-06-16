@@ -12,6 +12,7 @@
         public double TempMin { get; set; }
         public double TempMax { get; set; }
         public double TempFeelsLike { get; set; }
-        public int Humidity { get; set; }
+
+        public WeatherDetailModel? Details { get; set; }
     }
 }
