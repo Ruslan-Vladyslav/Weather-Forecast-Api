@@ -145,3 +145,21 @@
     width: 40px;
     height: 40px;
 }
+
+
+
+/* Modal and show daily forecast*/
+#forecastDailyBody .row {
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.forecast-time,
+.forecast-temp,
+.forecast-desc,
+.forecast-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

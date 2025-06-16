@@ -34,7 +34,7 @@
                     <label class="infoHeader mb-4">Air Conditions</label>
                     <div class="row text-center">
                         <div class="col d-flex align-items-start justify-content-center">
-                            <div class="weather-info-icon">💨</div>
+                            <i class="bi bi-wind me-2 weather-info-icon"></i>
                             <div class="weather-info-text ms-2">
                                 <div class="label">Wind (info)</div>
                                 <div class="value text-dark">
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="col d-flex align-items-start justify-content-center">
-                            <div class="weather-info-icon">🌫️</div>
+                            <i class="bi bi-speedometer2 me-2 weather-info-icon"></i>
                             <div class="weather-info-text ms-2">
                                 <div class="label">Pressure</div>
                                 <div class="value text-dark"><strong><span id="lblPressure"></span></strong></div>
@@ -54,7 +54,7 @@
 
                     <div class="row text-center">
                         <div class="col d-flex align-items-start justify-content-center mt-5">
-                            <div class="weather-info-icon">☁️</div>
+                            <i class="bi bi-clouds me-2 weather-info-icon"></i>
                             <div class="weather-info-text ms-2">
                                 <div class="label">Cloudiness</div>
                                 <div class="value text-dark"><strong><span id="lblCloudiness"></span></strong></div>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="col d-flex align-items-start justify-content-center mt-5">
-                            <div class="weather-info-icon">💧</div>
+                            <i class="bi bi-droplet-half me-2 weather-info-icon"></i>
                             <div class="weather-info-text ms-2">
                                 <div class="label">Humidity</div>
                                 <div class="value text-dark"><strong><span id="lblHumidity"></span> %</strong></div>
@@ -82,6 +82,76 @@
     <div class="infoBlock" id="forecastDailyArea" style="display: none; margin-top: 2rem; margin-bottom: 2rem;">
         <label class="infoHeader mb-4">5-Day Forecast</label>
         <div id="forecastDailyBody"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="dayDetailModal" tabindex="-1" aria-labelledby="dayDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dayDetailModalLabel">Weather Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-calendar-event me-2"></i>
+                            <strong><span id="detail-weekday"></span></strong>
+                        </div>
+                        <div><span id="detail-date"></span></div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-thermometer-half me-2"></i>
+                            <strong>Temperature:</strong>
+                        </div>
+                        <div> <span id="detail-temp"></span> °C</div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-thermometer-sun me-2"></i>
+                            <strong>Feels Like:</strong>
+                        </div>
+                        <div> <span id="detail-feelslike"></span> °C</div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-speedometer2 me-2"></i>
+                            <strong>Pressure:</strong>
+                        </div>
+                        <div><span id="detail-pressure"></span> hPa</div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-droplet-half me-2"></i>
+                            <strong>Humidity:</strong>
+                        </div>
+                        <div><span id="detail-humidity"></span> %</div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-wind me-2"></i>
+                            <strong>Wind:</strong>
+                        </div>
+                        <div><span id="detail-wind"></span></div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-clouds me-2"></i>
+                            <strong>Cloudiness:</strong>
+                        </div>
+                        <div><span id="detail-clouds"></span> %</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
