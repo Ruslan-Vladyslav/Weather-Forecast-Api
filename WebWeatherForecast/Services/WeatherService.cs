@@ -11,7 +11,7 @@ namespace WebWeatherForecast.Services
     public class WeatherService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey;
+        private readonly string _apiKey; // Set your own openweather api key
 
         public WeatherService(HttpClient httpClient, IConfiguration configuration)
         {
